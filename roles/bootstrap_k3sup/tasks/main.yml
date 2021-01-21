@@ -9,6 +9,6 @@
 
 - name: Install k3sup binary
   when: fetchgetk3sup is succeeded
-  command: /usr/local/bin/getk3sup.sh
+  command: curl -sLS https://get.k3sup.dev | sh install k3sup /usr/local/bin/
   become: yes
   register: installk3sup

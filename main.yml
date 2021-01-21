@@ -1,6 +1,7 @@
 ---
 - hosts: master:slave
   become: yes
+  gather_facts: yes
   roles:
     - container_features
     - create_user
